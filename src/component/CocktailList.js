@@ -43,19 +43,19 @@ const CocktailList = () => {
 
   return (
     <div className="container">
-      <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div className="row row-cols-1 row-cols-md-4 g-4 mt-5">
         {modifiedCocktail.map((item) => {
           const { id, name, image, glass, info } = item;
           return (
             <div className="col" key={id}>
-              <div className="card h-2">
+              <div className="card cocktail h-2">
                 <img src={image} alt={name} className="card-img-top" />
                 <div className="card-body" style={{ textAlign: "left" }}>
                   <h5 className="card-title">{name}</h5>
                   <h4 className="card-title">{glass}</h4>
                   <p className="card-text">{info}</p>
                   <Link to={`/cocktail/${id}`}>
-                    <button className="btn btn-info">Details</button>
+                    <button className="btn btn-success">Details</button>
                   </Link>
                 </div>
               </div>

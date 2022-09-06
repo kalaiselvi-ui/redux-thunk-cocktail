@@ -27,14 +27,59 @@ code {
   margin-bottom: 3.5rem;
   margin-top: 1rem;
   color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .drink {
   width: 85vw;
   max-width: 1170px;
   margin: 0 auto;
   text-align: left;
+  display: flex;
+  gap: 2rem;
+}
+.drink img {
+  width: 30vw;
+  height: 55vh;
 }
 .drink-data {
   background: #afafaf;
   padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+.drink-data {
+  color: green;
+  margin: 0 0.5rem;
+}
+
+@media screen and (min-width: 9992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+}
+.cocktail {
+  background-color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 0.25;
+}
+.cocktail:hover {
+  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.cocktail img {
+  height: 15rem;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
