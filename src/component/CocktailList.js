@@ -43,7 +43,7 @@ const CocktailList = () => {
 
   return (
     <div className="container">
-      <div className="row row-cols-1 row-cols-md-4 g-4 mt-5">
+      <div className="row row-cols-1 row-cols-md-4 g-4 mt-1">
         {modifiedCocktail.map((item) => {
           const { id, name, image, glass, info } = item;
           return (

@@ -26,6 +26,23 @@ const cockTailReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload,
       };
+    case types.SEARCH_COCKTAIL_START:
+      return {
+        ...state,
+        loading: true,
+      };
+    case types.SEARCH_COCKTAIL_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        cocktails: action.payload,
+      };
+    case types.SEARCH_COCKTAIL_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     case types.GET_SINGLE_COCKTAIL_START:
       return {
         ...state,
